@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://b1m7ks7r8dl2l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0920139
+anchor_top = 0.364969
+anchor_right = 0.0920139
+anchor_bottom = 0.364969
+offset_top = -11.5
+offset_right = 133.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "Tales of the Mind"
+metadata/_edit_use_anchors_ = true
+
+[node name="NewButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 272.0
+offset_right = 202.0
+offset_bottom = 303.0
+text = "  New  "
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 317.0
+offset_right = 202.0
+offset_bottom = 348.0
+text = "  Join  "
+
+[node name="GamesListScroll" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 133.0
+offset_right = 1035.0
+offset_bottom = 528.0
+
+[node name="GamesListContainer" type="VBoxContainer" parent="GamesListScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GameButtonTemplate" type="Button" parent="GamesListScroll/GamesListContainer"]
+layout_mode = 2
+text = " TEMPLATE GAME"
+
+[node name="JoinGame" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 311.0
+offset_top = 197.0
+offset_right = 829.0
+offset_bottom = 397.0
+
+[node name="JoinGameTitle" type="Label" parent="JoinGame"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 15.0
+offset_right = 113.0
+offset_bottom = 38.0
+text = "Join Game"
+
+[node name="EnterCode" type="TextEdit" parent="JoinGame"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 50.0
+offset_right = 203.0
+offset_bottom = 85.0
+placeholder_text = "XXXXXXX"
+
+[node name="JoinButton" type="Button" parent="JoinGame"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 98.0
+offset_right = 91.0
+offset_bottom = 129.0
+text = "  Play  "
+
+[node name="GameOptions" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 383.0
+offset_top = 187.0
+offset_right = 742.0
+offset_bottom = 427.0
+
+[node name="GameName" type="Label" parent="GameOptions"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 25.0
+offset_right = 142.0
+offset_bottom = 48.0
+text = " GAME NAME"
+
+[node name="HostButton" type="Button" parent="GameOptions"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 91.0
+offset_right = 102.0
+offset_bottom = 122.0
+text = "  Host  "
+
+[node name="DeleteButton" type="Button" parent="GameOptions"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 90.0
+offset_right = 243.0
+offset_bottom = 121.0
+text = "  Delete  "
+
+[node name="NewGame" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 335.0
+offset_top = 207.0
+offset_right = 667.0
+offset_bottom = 376.0
+
+[node name="NewGameTitle" type="Label" parent="NewGame"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 36.0
+text = " New Game  "
+
+[node name="EnterGameName" type="TextEdit" parent="NewGame"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 47.0
+offset_right = 195.0
+offset_bottom = 94.0
+placeholder_text = "  GAME NAME  "
+
+[node name="HostButton" type="Button" parent="NewGame"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 108.0
+offset_right = 94.0
+offset_bottom = 139.0
+text = "  Host   "
+
+[node name="HostCode" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 378.0
+offset_top = 196.0
+offset_right = 750.0
+offset_bottom = 414.0
+
+[node name="HostCodeTitle" type="Label" parent="HostCode"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 33.0
+offset_right = 152.0
+offset_bottom = 75.0
+text = "Your code:"
+
+[node name="Code" type="Label" parent="HostCode"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 71.0
+offset_right = 85.0
+offset_bottom = 94.0
+text = "XXXXX"
+
+[node name="PlayButton" type="Button" parent="HostCode"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 113.0
+offset_right = 104.0
+offset_bottom = 144.0
+text = "  Play  "
